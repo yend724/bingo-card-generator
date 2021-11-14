@@ -10,5 +10,8 @@ export const generateCardNumbers = () => {
 		shuffle(serialNumbers.slice(45, 60)).slice(0, 5),
 		shuffle(serialNumbers.slice(60, 75)).slice(0, 5),
 	];
-	return transpose(serialNumbersSplit).flat();
+	const cardNumbers = transpose(serialNumbersSplit)
+		.flat()
+		.map((v, i) => (i === 12 ? 0 : v));
+	return cardNumbers;
 };
