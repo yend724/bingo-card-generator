@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 
 type Props = {
 	i: Number;
 	number: Number;
+	open: boolean;
+	setOpen: (n: Number) => void;
 };
-const BingoSpot: React.FC<Props> = ({ i, number }) => {
-	const [open, setOpen] = useState(false);
-	const onClickOpen = () => {
-		setOpen(true);
-	};
-
+const BingoSpot: React.FC<Props> = ({ i, number, open, setOpen }) => {
+	console.log("render" + number);
 	return (
 		<div
 			className={`w-12 h-12 mt-3 bg-white cursor-pointer group ${
 				Number(i) % 5 !== 0 && "ml-3"
 			}`}
-			onClick={onClickOpen}
+			onClick={() => {
+				setOpen(i);
+			}}
 		>
 			<div className="flex items-center justify-center w-full h-full perspective-500">
 				<span className="inline-block bg-gray-300 rounded-t-xl">
@@ -32,4 +32,4 @@ const BingoSpot: React.FC<Props> = ({ i, number }) => {
 	);
 };
 
-export default BingoSpot;
+export default React.memo(BingoSpot);

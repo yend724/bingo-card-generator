@@ -12,6 +12,8 @@ export const generateCardNumbers = () => {
 	];
 	const cardNumbers = transpose(serialNumbersSplit)
 		.flat()
-		.map((v, i) => (i === 12 ? 0 : v));
+		.map((v, i) =>
+			i === 12 ? { number: 0, open: false } : { number: v, open: false }
+		);
 	return cardNumbers;
 };

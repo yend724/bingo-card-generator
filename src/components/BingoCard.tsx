@@ -1,15 +1,27 @@
 import React from "react";
 import BingoHead from "./BingoHead";
 import BingoSpot from "./BingoSpot";
-import { generateCardNumbers } from "../util/generateCardNumbers";
 
-const BingoCard: React.FC = () => {
+type Props = {
+	numbers: {
+		number: Number;
+		open: boolean;
+	}[];
+	setOpen: (n: Number) => void;
+};
+const BingoCard: React.FC<Props> = ({ numbers, setOpen }) => {
 	return (
 		<div className="mt-4 py-4 bg-green-300 rounded">
 			<BingoHead />
 			<div className="flex flex-wrap px-4">
-				{generateCardNumbers().map((_, i) => (
-					<BingoSpot key={i} number={_} i={i} />
+				{numbers.map((_, i) => (
+					<BingoSpot
+						key={i}
+						number={_.number}
+						open={_.open}
+						i={i}
+						setOpen={setOpen}
+					/>
 				))}
 			</div>
 		</div>
