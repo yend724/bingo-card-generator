@@ -20,7 +20,7 @@ const BingoSpot: React.FC<Props> = ({ i, number }) => {
 			<div className="flex items-center justify-center w-full h-full perspective-500">
 				<span className="inline-block bg-gray-300 rounded-t-xl">
 					<span
-						className={`flex items-center justify-center w-8 h-8 bg-white rounded-t-xl transform-gpu translate-y-px origin-bottom ${
+						className={`flex items-center justify-center w-8 h-8 bg-white rounded-t-xl transform-gpu translate-y-px origin-bottom transition-all ease-out duration-150 ${
 							open ? "rotate-x-60" : "group-hover:opacity-50"
 						} ${number === 0 && "text-sm"}`}
 					>

@@ -1,24 +1,14 @@
 import { arrayShuffle as shuffle } from "./arrayShuffle";
+import { transpose } from "./transpose";
 
 export const generateCardNumbers = () => {
-	const all = Array.from({ length: 75 }, (_, i) => i + 1);
-	const arr: number[][] = [
-		shuffle(all.slice(0, 15)),
-		shuffle(all.slice(15, 30)),
-		shuffle(all.slice(30, 45)),
-		shuffle(all.slice(45, 60)),
-		shuffle(all.slice(60, 75)),
+	const serialNumbers = Array.from({ length: 75 }, (_, i) => i + 1);
+	const serialNumbersSplit: number[][] = [
+		shuffle(serialNumbers.slice(0, 15)).slice(0, 5),
+		shuffle(serialNumbers.slice(15, 30)).slice(0, 5),
+		shuffle(serialNumbers.slice(30, 45)).slice(0, 5),
+		shuffle(serialNumbers.slice(45, 60)).slice(0, 5),
+		shuffle(serialNumbers.slice(60, 75)).slice(0, 5),
 	];
-	const ret: number[] = [];
-
-	for (let i = 0; i < 5; i++) {
-		for (let j = 0; j < 5; j++) {
-			if (i === 2 && j === 2) {
-				ret.push(0);
-			} else {
-				ret.push(arr[j][i]);
-			}
-		}
-	}
-	return ret;
+	return transpose(serialNumbersSplit).flat();
 };
