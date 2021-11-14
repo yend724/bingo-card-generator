@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.08d3f560.chunk.css",
-    "main.js": "/static/js/main.df0cf617.chunk.js",
-    "main.js.map": "/static/js/main.df0cf617.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.dbe73f81.js",
-    "runtime-main.js.map": "/static/js/runtime-main.dbe73f81.js.map",
-    "static/js/2.e5b1eb99.chunk.js": "/static/js/2.e5b1eb99.chunk.js",
-    "static/js/2.e5b1eb99.chunk.js.map": "/static/js/2.e5b1eb99.chunk.js.map",
-    "static/js/3.5fbc549d.chunk.js": "/static/js/3.5fbc549d.chunk.js",
-    "static/js/3.5fbc549d.chunk.js.map": "/static/js/3.5fbc549d.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.08d3f560.chunk.css.map": "/static/css/main.08d3f560.chunk.css.map",
-    "static/js/2.e5b1eb99.chunk.js.LICENSE.txt": "/static/js/2.e5b1eb99.chunk.js.LICENSE.txt"
+    "main.css": "/bingo-card-generator/static/css/main.08d3f560.chunk.css",
+    "main.js": "/bingo-card-generator/static/js/main.df0cf617.chunk.js",
+    "main.js.map": "/bingo-card-generator/static/js/main.df0cf617.chunk.js.map",
+    "runtime-main.js": "/bingo-card-generator/static/js/runtime-main.75d4c088.js",
+    "runtime-main.js.map": "/bingo-card-generator/static/js/runtime-main.75d4c088.js.map",
+    "static/js/2.e5b1eb99.chunk.js": "/bingo-card-generator/static/js/2.e5b1eb99.chunk.js",
+    "static/js/2.e5b1eb99.chunk.js.map": "/bingo-card-generator/static/js/2.e5b1eb99.chunk.js.map",
+    "static/js/3.5fbc549d.chunk.js": "/bingo-card-generator/static/js/3.5fbc549d.chunk.js",
+    "static/js/3.5fbc549d.chunk.js.map": "/bingo-card-generator/static/js/3.5fbc549d.chunk.js.map",
+    "index.html": "/bingo-card-generator/index.html",
+    "static/css/main.08d3f560.chunk.css.map": "/bingo-card-generator/static/css/main.08d3f560.chunk.css.map",
+    "static/js/2.e5b1eb99.chunk.js.LICENSE.txt": "/bingo-card-generator/static/js/2.e5b1eb99.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.dbe73f81.js",
+    "static/js/runtime-main.75d4c088.js",
     "static/js/2.e5b1eb99.chunk.js",
     "static/css/main.08d3f560.chunk.css",
     "static/js/main.df0cf617.chunk.js"
