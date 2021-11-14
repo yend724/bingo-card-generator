@@ -1,26 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import BingoCard from "./components/BingoCard";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+	return (
+		<div className="w-full h-full p-2">
+			<h1 className="text-xl font-bold text-center">Bingo Card Generator</h1>
+			<div className="mx-auto w-72">
+				<BingoCard />
+			</div>
+		</div>
+	);
+};
 
 export default App;
