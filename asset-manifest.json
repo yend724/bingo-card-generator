@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/bingo-card-generator/static/css/main.9682473a.chunk.css",
-    "main.js": "/bingo-card-generator/static/js/main.d07de27a.chunk.js",
-    "main.js.map": "/bingo-card-generator/static/js/main.d07de27a.chunk.js.map",
-    "runtime-main.js": "/bingo-card-generator/static/js/runtime-main.75d4c088.js",
-    "runtime-main.js.map": "/bingo-card-generator/static/js/runtime-main.75d4c088.js.map",
-    "static/js/2.e5b1eb99.chunk.js": "/bingo-card-generator/static/js/2.e5b1eb99.chunk.js",
-    "static/js/2.e5b1eb99.chunk.js.map": "/bingo-card-generator/static/js/2.e5b1eb99.chunk.js.map",
-    "static/js/3.5fbc549d.chunk.js": "/bingo-card-generator/static/js/3.5fbc549d.chunk.js",
-    "static/js/3.5fbc549d.chunk.js.map": "/bingo-card-generator/static/js/3.5fbc549d.chunk.js.map",
+    "main.css": "/bingo-card-generator/static/css/main.5f77075a.chunk.css",
+    "main.js": "/bingo-card-generator/static/js/main.3ef5406a.chunk.js",
+    "main.js.map": "/bingo-card-generator/static/js/main.3ef5406a.chunk.js.map",
+    "runtime-main.js": "/bingo-card-generator/static/js/runtime-main.b12347f4.js",
+    "runtime-main.js.map": "/bingo-card-generator/static/js/runtime-main.b12347f4.js.map",
+    "static/js/2.b538a6e5.chunk.js": "/bingo-card-generator/static/js/2.b538a6e5.chunk.js",
+    "static/js/2.b538a6e5.chunk.js.map": "/bingo-card-generator/static/js/2.b538a6e5.chunk.js.map",
+    "static/js/3.4c088ad4.chunk.js": "/bingo-card-generator/static/js/3.4c088ad4.chunk.js",
+    "static/js/3.4c088ad4.chunk.js.map": "/bingo-card-generator/static/js/3.4c088ad4.chunk.js.map",
     "index.html": "/bingo-card-generator/index.html",
-    "static/css/main.9682473a.chunk.css.map": "/bingo-card-generator/static/css/main.9682473a.chunk.css.map",
-    "static/js/2.e5b1eb99.chunk.js.LICENSE.txt": "/bingo-card-generator/static/js/2.e5b1eb99.chunk.js.LICENSE.txt"
+    "static/css/main.5f77075a.chunk.css.map": "/bingo-card-generator/static/css/main.5f77075a.chunk.css.map",
+    "static/js/2.b538a6e5.chunk.js.LICENSE.txt": "/bingo-card-generator/static/js/2.b538a6e5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.75d4c088.js",
-    "static/js/2.e5b1eb99.chunk.js",
-    "static/css/main.9682473a.chunk.css",
-    "static/js/main.d07de27a.chunk.js"
+    "static/js/runtime-main.b12347f4.js",
+    "static/js/2.b538a6e5.chunk.js",
+    "static/css/main.5f77075a.chunk.css",
+    "static/js/main.3ef5406a.chunk.js"
   ]
 }
