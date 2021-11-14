@@ -1,10 +1,4 @@
-const shuffle = ([...array]: number[]) => {
-	for (let i = array.length - 1; i >= 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
-		[array[i], array[j]] = [array[j], array[i]];
-	}
-	return array;
-};
+import { arrayShuffle as shuffle } from "./arrayShuffle";
 
 export const generateCardNumbers = () => {
 	const all = Array.from({ length: 75 }, (_, i) => i + 1);
@@ -16,6 +10,7 @@ export const generateCardNumbers = () => {
 		shuffle(all.slice(60, 75)),
 	];
 	const ret: number[] = [];
+
 	for (let i = 0; i < 5; i++) {
 		for (let j = 0; j < 5; j++) {
 			if (i === 2 && j === 2) {

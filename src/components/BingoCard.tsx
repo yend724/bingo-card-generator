@@ -5,11 +5,11 @@ import { generateCardNumbers } from "../util/generateCardNumbers";
 
 const BingoCard: React.FC = () => {
 	return (
-		<div className="mt-2 pt-2 pb-2 bg-green-300 rounded">
+		<div className="mt-4 py-4 bg-green-300 rounded">
 			<BingoHead />
-			<div className="flex flex-wrap">
+			<div className="flex flex-wrap px-4">
 				{generateCardNumbers().map((_, i) => (
-					<BingoSpot key={i} number={_} />
+					<BingoSpot key={i} number={_} i={i} />
 				))}
 			</div>
 		</div>

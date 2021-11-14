@@ -3,9 +3,9 @@ import BingoCard from "./components/BingoCard";
 
 const App: React.FC = () => {
 	return (
-		<div className="w-full h-full p-2">
+		<div className="w-full h-full p-5">
 			<h1 className="text-xl font-bold text-center">Bingo Card Generator</h1>
-			<div className="mx-auto w-72">
+			<div className="mx-auto w-80">
 				<BingoCard />
 			</div>
 		</div>
