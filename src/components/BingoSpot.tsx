@@ -7,17 +7,18 @@ type Props = {
 	setOpen: (n: Number) => void;
 };
 const BingoSpot: React.FC<Props> = ({ i, number, open, setOpen }) => {
-	console.log("render" + number);
 	return (
 		<div
 			className={`w-12 h-12 mt-3 bg-white cursor-pointer group ${
 				Number(i) % 5 !== 0 && "ml-3"
 			}`}
-			onClick={() => {
-				setOpen(i);
-			}}
 		>
-			<div className="flex items-center justify-center w-full h-full perspective-500">
+			<button
+				className="flex items-center justify-center w-full h-full perspective-500"
+				onClick={() => {
+					setOpen(i);
+				}}
+			>
 				<span className="inline-block bg-gray-300 rounded-t-xl">
 					<span
 						className={`flex items-center justify-center w-8 h-8 bg-white rounded-t-xl transform-gpu translate-y-px origin-bottom transition-all ease-out duration-150 ${
@@ -27,7 +28,7 @@ const BingoSpot: React.FC<Props> = ({ i, number, open, setOpen }) => {
 						{number === 0 ? "Free" : number}
 					</span>
 				</span>
-			</div>
+			</button>
 		</div>
 	);
 };
