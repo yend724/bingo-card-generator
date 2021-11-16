@@ -7,9 +7,9 @@ type Props = {
 		number: Number;
 		open: boolean;
 	}[];
-	setOpen: (n: Number) => void;
+	open: (n: Number) => void;
 };
-const BingoCard: React.FC<Props> = ({ numbers, setOpen }) => {
+const BingoCard: React.FC<Props> = ({ numbers, open }) => {
 	return (
 		<div className="mt-4 py-4 bg-green-300 rounded">
 			<BingoHead />
@@ -18,9 +18,9 @@ const BingoCard: React.FC<Props> = ({ numbers, setOpen }) => {
 					<BingoSpot
 						key={i}
 						number={_.number}
-						open={_.open}
+						isOpen={_.open}
 						i={i}
-						setOpen={setOpen}
+						open={open}
 					/>
 				))}
 			</div>

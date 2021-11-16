@@ -1,45 +1,46 @@
-import React, { useState, useEffect, useRef } from "react";
-import { arrayShuffle } from "../util/arrayShuffle";
-
-const targets = arrayShuffle(Array.from({ length: 75 }, (_, i) => ++i));
-const n = (c: number) => {
-	switch (c) {
-		case 0:
-			return "??";
-		default:
-			return targets[c - 1];
-	}
-};
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 type Props = {
-	stop: boolean;
+	start: boolean;
+	numbers: number[];
 };
-const Ball: React.FC<Props> = ({ stop }) => {
+const Ball: React.FC<Props> = ({ start, numbers }) => {
 	const [random, setRandom] = useState(0);
 	const [count, setCount] = useState(0);
+	const startRef = useRef(false);
 	const requestRef = useRef<number>(0);
-	useEffect(() => {
-		const animate = () => {
-			setRandom(pre => (pre > 75 ? 0 : ++pre));
-			if (!stop) {
-				requestRef.current = requestAnimationFrame(animate);
-			}
-		};
-		animate();
 
-		if (!stop) {
+	const animate = useCallback(() => {
+		setRandom(pre => (pre > 75 ? 0 : ++pre));
+		if (startRef.current) {
+			requestRef.current = requestAnimationFrame(animate);
+		}
+	}, []);
+
+	useEffect(() => {
+		startRef.current = start;
+		animate();
+		if (start) {
 			setCount(c => ++c);
 		}
 		return () => {
 			cancelAnimationFrame(requestRef.current);
 		};
-	}, [stop]);
+	}, [start, animate]);
+
+	if (count === 0) {
+		return <span className="text-9xl font-bold">??</span>;
+	}
+
+	if (count > numbers.length) {
+		return <span className="text-5xl font-bold">Completed</span>;
+	}
 
 	return (
 		<span className="text-9xl font-bold">
-			{count > targets.length ? "End" : stop ? n(count) : random}
+			{start ? numbers[random - 1] : numbers[count - 1]}
 		</span>
 	);
 };
 
-export default Ball;
+export default React.memo(Ball);
